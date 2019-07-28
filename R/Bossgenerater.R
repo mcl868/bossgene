@@ -1,0 +1,19 @@
+bossgen.formula<-function(){
+	whoboss<-readline(prompt=paste0("Enter the previous Boss (Press enter if you did not have any): "))
+	if(!tolower(whoboss)=="q"){
+		posslist<-do.call("sampleset",list(x=whoboss))$possible
+		i<-TRUE
+		while(i){
+			possboss<-do.call("thechoosen",list(x= posslist))
+			isboss<-readline(prompt=paste0("Is ",possboss," present today? (Yes or No): "))
+			ynisboss<-do.call("yesorno",list(x=isboss))
+			if(!ynisboss$qui){message("You have either pick yes or no");posslist<-posslist} else {
+				posslist<-do.call("removelist",list(x=possboss, list=posslist))}
+			if(with(ynisboss,qui & quiy))message("Today, ",possboss," is boss.")
+			if(length(posslist)==1){i<-FALSE;message("Today, ", posslist," is boss.")} else {
+				i<-!with(ynisboss,qui & quiy)}
+		}
+	}
+}
+
+
