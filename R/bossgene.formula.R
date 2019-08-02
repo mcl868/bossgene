@@ -4,7 +4,7 @@ bossgene.formula<-function(){
 		posslist<-do.call("sampleset",list(x=whoboss))$possible
 		i<-TRUE
 		while(i){
-			possboss<-do.call("thechoosen",list(x= posslist))
+			possboss<-do.call("thechoosen",list(x=posslist))
 			isboss<-readline(prompt=paste0("Is ",possboss," present today? (Yes or No): "))
 			ynisboss<-do.call("yesorno",list(x=isboss))
 			if(!ynisboss$qui){message("You have either pick yes or no");posslist<-posslist} else {
