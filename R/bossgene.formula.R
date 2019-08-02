@@ -10,9 +10,8 @@ bossgene.formula<-function(){
 			if(!ynisboss$qui){message("You have either pick yes or no");posslist<-posslist} else {
 				posslist<-do.call("removelist",list(x=possboss, list=posslist))}
 			if(with(ynisboss,qui & quiy))message("Today, ",possboss," is boss.")
-			print(with(ynisboss,qui & quiy))
 			if(length(posslist)==1 & !with(ynisboss,qui & quiy)){
-				i<-FALSE;message("Today, ", posslist," is boss.")} else {
+				i<-FALSE;message("Today, ", Nameperson(posslist)," is boss.")} else {
 				i<-!with(ynisboss,qui & quiy)}
 		}
 	}
