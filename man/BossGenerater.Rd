@@ -8,7 +8,7 @@ boss.generater
   It is a Boss generater. 
 }
 \usage{
-boss.generater()
+boss.generater(x=NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

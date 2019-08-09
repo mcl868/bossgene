@@ -1,4 +1,4 @@
-bossgene.formula<-function(){
+bossgene.formula<-function(x){
 	whoboss<-readline(prompt=paste0("Enter the previous Boss (Press enter if you did not have any): "))
 	if(!tolower(whoboss)=="q"){
 		posslist<-do.call("sampleset",list(x=whoboss))$possible
