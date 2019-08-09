@@ -1,1 +1,0 @@
-BossGenerater<-function(){do.call("bossgene.formula",list())}
