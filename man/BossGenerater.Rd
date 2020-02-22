@@ -1,14 +1,14 @@
-\name{BossGenerater}
-\alias{BossGenerater}
+\name{boss.generater}
+\alias{boss.generater}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-BossGenerater
+boss.generater
 }
 \description{
   It is a Boss generater. 
 }
 \usage{
-BossGenerater()
+boss.generater(x=NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
